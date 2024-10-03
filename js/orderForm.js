@@ -34,7 +34,7 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
     `;
 
     // Přepočet na jinou měnu (použití fiktivního kurzu)
-    fetch('https://tvujserver.cz/getCNBData.php')
+    fetch('https://vitezslavdaricek.github.io/objednavka.github.io//getCNBData.php')
         .then(response => response.text())
         .then(data => {
             const exchangeRate = extractExchangeRate(data, 'EUR');    // Příklad pro Euro

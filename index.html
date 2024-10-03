@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulář pro objednávku</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body>
+    <h2>Formulář pro objednávku</h2>
+
+    <form id="orderForm" method="get" class="form-example">
+        <div class="form-example">
+          <label for="name">Jméno: </label>
+          <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-example">
+          <label for="surname">Přijmení: </label>
+          <input type="text" name="surname" id="surname" required />
+        </div>
+        <div class="form-example">
+          <label for="email">E-mail: </label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div class="form-example">
+          <label for="product">Název produktu: </label>
+          <input type="text" name="product" id="product" required />
+        </div>
+        <div class="form-example">
+          <label for="price">Cena za kus: </label>
+          <input type="number" name="price" id="price" required min="1" />
+        </div>
+        <div class="form-example">
+          <label for="quantity">Množství: </label>
+          <input type="number" name="quantity" id="quantity" required min="1" value="1" />
+        </div>
+
+        <p><strong>Celková cena: <span id="totalPrice">0</span> Kč</strong></p>
+
+        <div class="form-example">
+          <input type="submit" value="Odeslat" />
+        </div>
+    </form>
+
+    <div class="summary" id="summary"></div>
+
+    <script src="js/vypocet_ceny.js"></script>
+    <script src="js/orderForm.js"></script>
+</body>
+</html>
